@@ -1,18 +1,14 @@
-global    _main
+global    start
 
 section   .text
 
-_main:
-	mov rcx, 10
-_cycle:
+start:
 	mov		rax, 0x02000004
 	mov		rdi, 1
 	mov		rsi, message
 	mov		rdx, len
 	syscall
-	dec rcx
-	jnz _cycle
-_end:
+end:
 	mov		rax, 0x02000001
 	xor		rdi, rdi
 	syscall

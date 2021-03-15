@@ -1,7 +1,8 @@
 all:
-	nasm -f macho64 test.s
-	ld -lSystem -o program test.o
-	./program
+	nasm -f macho64 ft_putchar.s
+	nasm -f macho64 ft_putstr.s
+	clang main.c ft_putchar.o ft_putstr.o
+	./a.out
 clean:
-	rf test.o
-	rf program
+	rm a.out
+	rm *.o
