@@ -1,5 +1,8 @@
-default	rel 			; меняет настройки ассемблера для работы с адресами
+default	rel 			; включение относительной адресации
 global _ft_putchar		; позволяет видеть функцию из других файлов
+
+section .bss			; секция неициализированных данных
+	char resb 1			; резервирование 1 байта
 
 section .text 			; основная секция для работы программы
 _ft_putchar:
@@ -9,6 +12,5 @@ _ft_putchar:
 	mov rdi, 1		; fd
 	mov rdx, 1		; lenght
 	syscall			; системный вызов
+	xor rax, rax
 	ret			; return
-section .data
-char: db 0			; инициализация переменной со значением 0
