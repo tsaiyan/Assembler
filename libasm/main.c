@@ -3,9 +3,9 @@
 void	ft_putchar(char ch);
 void	ft_putstr(char *str);
 size_t	ft_strlen(char *str);
-ssize_t	ft_write(int fildes, const void *buf, size_t nbyte);
-ssize_t	ft_read(int fildes, void *buf, size_t nbyte);
-
+ssize_t	ft_write(int fd, void *buf, size_t nbyte);
+ssize_t	ft_read(int fd, void *buf, size_t nbyte);
+int		ft_strcmp(const char *s1, const char *s2);
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -27,7 +27,7 @@ int	main(void)
 	puts("- - - - - -- - - - - - - -- - - - - - - -- - - - - - -- - - ");
 	
 	errno = 0;
-	int fd = open("/Users/tsaiyan/libasm/test.txt", O_RDONLY);
+	int fd = open("test.txt", O_RDONLY);
 	printf("ft_read = %zd\n", ft_read(fd, buffer, 1));
 	perror("error ft_read");
 	printf("read = %zd\n", read(fd, buffer, 1));

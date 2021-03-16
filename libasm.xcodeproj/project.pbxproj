@@ -13,6 +13,7 @@
 		97A1B5FA25FFAC0400B58F11 /* ft_putstr.s in Sources */ = {isa = PBXBuildFile; fileRef = 97A1B5F925FFAC0400B58F11 /* ft_putstr.s */; };
 		97A1B5FC25FFB25800B58F11 /* ft_strlen.s in Sources */ = {isa = PBXBuildFile; fileRef = 97A1B5FB25FFB25800B58F11 /* ft_strlen.s */; };
 		97ABD73F26012A2000493C6D /* ft_read.s in Sources */ = {isa = PBXBuildFile; fileRef = 97ABD73E26012A2000493C6D /* ft_read.s */; };
+		97ABD7422601304200493C6D /* ft_strcmp.s in Sources */ = {isa = PBXBuildFile; fileRef = 97ABD7412601304200493C6D /* ft_strcmp.s */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -50,6 +51,8 @@
 		97A1B5F925FFAC0400B58F11 /* ft_putstr.s */ = {isa = PBXFileReference; explicitFileType = sourcecode.nasm; fileEncoding = 4; path = ft_putstr.s; sourceTree = "<group>"; };
 		97A1B5FB25FFB25800B58F11 /* ft_strlen.s */ = {isa = PBXFileReference; explicitFileType = sourcecode.nasm; path = ft_strlen.s; sourceTree = "<group>"; };
 		97ABD73E26012A2000493C6D /* ft_read.s */ = {isa = PBXFileReference; explicitFileType = sourcecode.nasm; path = ft_read.s; sourceTree = "<group>"; };
+		97ABD74026012F4100493C6D /* test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		97ABD7412601304200493C6D /* ft_strcmp.s */ = {isa = PBXFileReference; explicitFileType = sourcecode.nasm; path = ft_strcmp.s; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +86,13 @@
 			isa = PBXGroup;
 			children = (
 				97A1B5EF25FFA99200B58F11 /* main.c */,
+				97ABD74026012F4100493C6D /* test.txt */,
 				97ABD73E26012A2000493C6D /* ft_read.s */,
 				97A1B5F625FFAA1700B58F11 /* ft_putchar.s */,
 				97A1B5FB25FFB25800B58F11 /* ft_strlen.s */,
 				97A1B5F925FFAC0400B58F11 /* ft_putstr.s */,
 				97038A1F25FFEC94007AC015 /* ft_write.s */,
+				97ABD7412601304200493C6D /* ft_strcmp.s */,
 			);
 			path = libasm;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				97A1B5FA25FFAC0400B58F11 /* ft_putstr.s in Sources */,
 				97A1B5F725FFAA1700B58F11 /* ft_putchar.s in Sources */,
 				97038A2025FFEC94007AC015 /* ft_write.s in Sources */,
+				97ABD7422601304200493C6D /* ft_strcmp.s in Sources */,
 				97A1B5FC25FFB25800B58F11 /* ft_strlen.s in Sources */,
 				97ABD73F26012A2000493C6D /* ft_read.s in Sources */,
 			);
