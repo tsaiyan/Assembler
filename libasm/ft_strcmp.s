@@ -16,14 +16,21 @@ global _ft_strcmp
 
 section .text
 _ft_strcmp:
-	lea rdx, [rdi]
-	lea	rcx, [rsi]
-	cmp  rdx, rcx
-	je _exit
-	push rdi
-	mov rdi, [rdi]
-	pop rdi
-	inc rdi
-_exit:
-	xor rax, rax
-	ret
+.main
+		xor rbx, rbx				; i = 0
+.cycle:
+		mov al , byte[rdi + rbx]	; получение значения 1 аргумента
+		mov dl , byte[rsi + rbx]	; получение значения 2 аргумента
+		cmp al, 0					; проверяем, что 1 строка не закончена
+		je .exit
+		cmp dl, 0					; проверяем, что 2 строка не закончилась
+		je .exit
+		inc rbx						; i++
+		cmp al, dl					; if str[i] = str2[i] повторяем цикл
+		je .cycle
+.exit:
+		movzx rax, al				; movzx - записывает в аргумент большего размера из меньшего
+		movzx rcx, dl
+		sub rax, rcx				; str[i] - str2[i]
+.return:
+		ret

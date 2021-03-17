@@ -10,20 +10,23 @@
 ;#                                                                              #
 ;# **************************************************************************** #
 
-default	rel 				; включение относительной адресации
-global _ft_putchar			; позволяет видеть функцию из других файлов
+; rdi - dest, rsi - src
 
-section .bss				; секция неициализированных данных
-		char resb 1			; резервирование 1 байта
+global _ft_strcpy
 
-section .text 				; основная секция для работы программы
-_ft_putchar:
-.main
-		mov [char], rdi		; запись в char адреса входящего аргумента (символа)
-		mov rax, 0x02000004	; вызов write
-		lea rsi, char		; lea копирует адрес: источник только переменная, приемник - адрес
-		mov rdi, 1			; fd
-		mov rdx, 1			; lenght
-		syscall				; системный вызов
-		xor rax, rax
-		ret					; return
+section .text
+_ft_strcpy:
+.main:
+		cmp rsi, 0					; проверка на NULL
+		je .return
+		xor rbx, rbx				; i = 0
+.cycle:
+		mov al , byte[rsi + rbx]	; разименовали src[i]
+		mov byte[rdi + rbx], al		; записали в dest[i]
+		inc rbx						; i++
+		cmp al, 0					; if src[i] != '\0' repeat
+		jne .cycle
+
+.return:
+		mov rax, rdi
+		ret
