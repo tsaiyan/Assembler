@@ -10,12 +10,10 @@
 ;#                                                                              #
 ;# **************************************************************************** #
 
-; rdi - dest, rsi - src
-
 global _ft_strcpy
 
 section .text
-_ft_strcpy:
+_ft_strcpy:							; rdi - dest, rsi - src
 .main:
 		cmp rsi, 0					; проверка на NULL
 		je .return

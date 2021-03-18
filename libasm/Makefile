@@ -1,8 +1,37 @@
-all:
-	nasm -f macho64 ft_putchar.s
-	nasm -f macho64 ft_putstr.s
-	clang main.c ft_putchar.o ft_putstr.o
-	./a.out
+SRCS = ft_read.s ft_strcmp.s ft_strcpy.s ft_strdup.s ft_strlen.s ft_write.s 
+
+BNS = ft_putstr.s ft_putchar.s
+
+HEADER = libasm.h
+
+OBJS = $(SRCS:.s=.o)
+
+BNSOBJS =  $(BNS:.s=.o)
+
+NAME = libasm.a
+
+RM = rm -f
+
+CC = nasm -f macho64
+
+.PHONY:		all clean fclean re
+
+all: $(NAME) libasm.h
+
+$(NAME): $(OBJS)
+	ar rc $(NAME) $?
+	ranlib $(NAME)
+.s.o:
+	$(CC) $< -o $@
+
 clean:
-	rm a.out
-	rm *.o
+	${RM} $(OBJS)
+	${RM} $(BNSOBJS)
+
+fclean: clean
+	${RM} $(NAME)
+
+run: $(NAME)
+	clang main.c $(NAME) $(HEADER)
+	./a.out
+re: fclean $(NAME)

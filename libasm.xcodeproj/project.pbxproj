@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9702F44526027760001AE44F /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 9702F44426027760001AE44F /* Makefile */; };
 		97038A2025FFEC94007AC015 /* ft_write.s in Sources */ = {isa = PBXBuildFile; fileRef = 97038A1F25FFEC94007AC015 /* ft_write.s */; };
 		972415B32602530100E409F8 /* ft_strcpy.s in Sources */ = {isa = PBXBuildFile; fileRef = 972415B22602530000E409F8 /* ft_strcpy.s */; };
 		972415B52602596900E409F8 /* ft_strdup.s in Sources */ = {isa = PBXBuildFile; fileRef = 972415B42602596900E409F8 /* ft_strdup.s */; };
@@ -46,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9702F44426027760001AE44F /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		97038A1F25FFEC94007AC015 /* ft_write.s */ = {isa = PBXFileReference; explicitFileType = sourcecode.nasm; path = ft_write.s; sourceTree = "<group>"; };
 		972415B22602530000E409F8 /* ft_strcpy.s */ = {isa = PBXFileReference; explicitFileType = sourcecode.nasm; path = ft_strcpy.s; sourceTree = "<group>"; };
 		972415B42602596900E409F8 /* ft_strdup.s */ = {isa = PBXFileReference; explicitFileType = sourcecode.nasm; path = ft_strdup.s; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		97A1B5EE25FFA99200B58F11 /* libasm */ = {
 			isa = PBXGroup;
 			children = (
+				9702F44426027760001AE44F /* Makefile */,
 				97A1B5EF25FFA99200B58F11 /* main.c */,
 				97ABD74026012F4100493C6D /* test.txt */,
 				97A1B5F625FFAA1700B58F11 /* ft_putchar.s */,
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9702F44526027760001AE44F /* Makefile in Sources */,
 				97A1B5F025FFA99200B58F11 /* main.c in Sources */,
 				972415B52602596900E409F8 /* ft_strdup.s in Sources */,
 				97A1B5FA25FFAC0400B58F11 /* ft_putstr.s in Sources */,

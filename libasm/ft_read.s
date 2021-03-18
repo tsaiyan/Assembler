@@ -16,7 +16,7 @@ extern ___error
 
 section .text 				; основная секция для работы программы
 _ft_read:
-.main
+.main:
 		mov rax, 0x02000003	; вызов read
 		syscall				; системный вызов
 		jc .error			; переход к ошибке, если флаг переноса установлен в 1. (if CF = 1)

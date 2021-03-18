@@ -10,13 +10,11 @@
 ;#                                                                              #
 ;# **************************************************************************** #
 
-; rdi - s1, rsi - s2
-
 global _ft_strcmp
 
 section .text
-_ft_strcmp:
-.main
+_ft_strcmp:							; rdi - s1, rsi - s2
+.main:
 		xor rbx, rbx				; i = 0
 .cycle:
 		mov al , byte[rdi + rbx]	; получение значения 1 аргумента
